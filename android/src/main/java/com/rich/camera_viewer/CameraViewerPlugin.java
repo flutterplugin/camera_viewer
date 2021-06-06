@@ -59,8 +59,7 @@ public class CameraViewerPlugin implements FlutterPlugin, MethodCallHandler {
     if (call.method.equals("getPlatformVersion")) {
       result.success("Android " + android.os.Build.VERSION.RELEASE);
     } else if(call.method.equals("startWifiConfig")){
-//      Intent intent = new Intent(context, SmartLinkQuickWifiConfigActivity.class);
-      Intent intent = new Intent(context, MainActivity.class);
+      Intent intent = new Intent(context, SmartLinkQuickWifiConfigActivity.class);
       context.startActivity(intent);
     } else if(call.method.equals("cameraPreview")){
       getParams(call);

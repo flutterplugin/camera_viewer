@@ -123,6 +123,7 @@ public class LoginActivity extends Activity {
                             startActivity(intent);
                             //MainActivity.this.finish();
                         }
+                        finish();
                         break;
                     }
                     case ResultCode.RESULT_CODE_FAIL_SERVER_CONNECT_FAIL: {
