@@ -60,11 +60,13 @@ public class CameraViewerPlugin implements FlutterPlugin, MethodCallHandler {
       result.success("Android " + android.os.Build.VERSION.RELEASE);
     } else if(call.method.equals("startWifiConfig")){
       Intent intent = new Intent(context, SmartLinkQuickWifiConfigActivity.class);
+      intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
       context.startActivity(intent);
     } else if(call.method.equals("cameraPreview")){
       getParams(call);
       checkParam();
       Intent intent = new Intent(context, LoginActivity.class);
+      intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
       context.startActivity(intent);
     } else if(call.method.equals("videoPlayback")){
       getParams(call);
@@ -72,6 +74,7 @@ public class CameraViewerPlugin implements FlutterPlugin, MethodCallHandler {
       LocalDefines._severInfoListData.clear();
       LocalDefines._severInfoListData.add(deviceInfo);
       Intent intent = new Intent(context, RecordActivity.class);
+      intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
       context.startActivity(intent);
     } else {
       result.notImplemented();

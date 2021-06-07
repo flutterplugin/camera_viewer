@@ -12,7 +12,7 @@
         android:layout_height="120dip"
         android:orientation="vertical" >
 
-        <com.macrovideo.custom.RoundCornerImageView
+        <com.rich.camera_viewer.demo.RoundCornerImageView
             android:id="@+id/item_face_G"
             android:layout_width="170dip"
             android:layout_height="120dip"

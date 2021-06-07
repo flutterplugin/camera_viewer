@@ -18,7 +18,7 @@
             android:layout_centerInParent="true"
             android:background="@drawable/preset_image_bg">
 
-            <com.macrovideo.demo.RoundCornerImageView
+            <com.rich.camera_viewer.demo.RoundCornerImageView
                 android:id="@+id/ivPresetImage"
                 android:layout_width="100dip"
                 android:layout_height="60dip"
@@ -57,7 +57,7 @@
             android:layout_centerInParent="true"
             android:background="@drawable/preset_image_bg_circular">
 
-            <com.macrovideo.demo.RoundCornerImageView
+            <com.rich.camera_viewer.demo.RoundCornerImageView
                 android:id="@+id/btnPTZXSet"
                 android:layout_width="60dip"
                 android:layout_height="60dip"

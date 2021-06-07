@@ -274,7 +274,7 @@
         android:orientation="vertical"
         android:visibility="gone" >
 
-        <com.macrovideo.animate.RadarView
+        <com.rich.camera_viewer.animate.RadarView
             android:id="@+id/SoundGifView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
