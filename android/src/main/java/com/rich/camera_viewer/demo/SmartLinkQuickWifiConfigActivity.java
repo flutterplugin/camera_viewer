@@ -52,6 +52,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.macrovideo.sdk.objects.DeviceInfo;
 import com.macrovideo.sdk.tools.DeviceScanner;
 import com.macrovideo.sdk.tools.Functions;
@@ -151,7 +154,17 @@ public class SmartLinkQuickWifiConfigActivity extends Activity implements
         requestWindowFeature(Window.FEATURE_NO_TITLE);// 隐藏标题 
         setContentView(R.layout.activity_smartlink_wifi_config);
         initView(); // 初始化界面控件
+        permission();
+    }
 
+    protected void permission(){
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED){//未开启定位权限
+            //开启定位权限,200是标识码
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},MY_PERMISSION_REQUEST_LOCATION);
+        }else{
+            Toast.makeText(this,"已开启定位权限",Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override

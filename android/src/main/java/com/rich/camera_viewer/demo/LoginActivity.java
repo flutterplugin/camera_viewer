@@ -105,7 +105,7 @@ public class LoginActivity extends Activity {
                     case ResultCode.RESULT_CODE_SUCCESS: {
 
                         Bundle bundle = msg.getData();
-
+//                        bundle.putBoolean("isSelectArea",true);
                         LoginHandle loginHandle = bundle.getParcelable("device_param");
                         LocalDefines.Device_LoginHandle = loginHandle;
                         int camType = loginHandle.getCamType();

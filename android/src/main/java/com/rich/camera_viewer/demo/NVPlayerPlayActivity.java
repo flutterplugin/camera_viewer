@@ -292,22 +292,6 @@ public class NVPlayerPlayActivity extends Activity implements View.OnClickListen
 
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        // 如果是返回键,直接返回到桌面
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-
-            if (isSelectArea == true) {
-                NVPlayerPlayActivity.this.finish();
-            } else {
-                exitCurrentActivity();
-            }
-
-        }
-
-        return false;
-    }
-
     // 获取是否播放音频的设置
     private void readSystemParam() {
 
@@ -353,6 +337,9 @@ public class NVPlayerPlayActivity extends Activity implements View.OnClickListen
 
     @Override
     public void onResume() {
+        if (getRequestedOrientation() != ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
         OnPlayersResume(); // 重新开始播放
         nToolsViewShowTickCount = 8;
         timerThreadID++;

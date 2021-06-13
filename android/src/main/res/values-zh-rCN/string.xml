@@ -632,7 +632,7 @@
     <string name="str_permission_storage2">存储空间权限异常，无法存储/读取数据，您需要在[设置-应用-demo-权限]中开启存储空间权限</string>
     <string name="str_permission_microphone1">麦克风权限异常，该功能无法使用</string>
     <string name="str_permission_microphone2">麦克风权限异常，该功能无法使用，您需要在[设置-应用-demo-权限]中开启麦克风权限</string>
-    <string name="str_permission_location">关闭位置信息权限会影响程序搜索设备/热点功能，请在[设置-应用-demo-权限]开启位置信息权限</string>
+    <string name="str_permission_location">关闭位置信息权限会影响程序搜索设备/热点功能，请在[设置]开启位置信息权限</string>
     <string name="str_saving">正在保存设置&#8230;</string>
 
     <!-- 静态IP设置 -->
